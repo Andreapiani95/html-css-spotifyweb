@@ -18,8 +18,74 @@ MAIN
 */
 
 main{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-main{
+    width: 100%;
+}
+
+.flex-sidebar{
+   flex-wrap: wrap;
+   justify-content: space-between;
+   width: 150px;
+   
+}
+
+.main-window{
+    width: calc(100% - 150px);
+}
+
+.sidebar-header{
+    padding-top: 50px;
+    width: 100%;
+}
+
+.logo{
+    transform: translate(0, -50%);
+}
+
+.sidebar-playlist{
+    margin-top: 2rem;
+}
+
+.sidebar-footer{
+    align-self: flex-end;
+    margin-top: 200px;
+}
+
+.upgrade{
+    text-align: end;
+    padding-top: 50px;
+    padding-right: 2rem;
+    
+}
+
+.upgrade>a>button{
+    transform: translate(0, -50%);
+    background-color: aqua;
+    border-radius: 15% / 50%;
+    font-size: 1rem;
+    padding: 1rem;    
+}
+/*
+
+FOOTER
+
+*/
+
+.flex-footer{
+    justify-content: space-between;
+}
+
+.footer-left,
+.footer-right{
+    width: 25%;
+}
+
+.footer-center{
+    width: 50%;
 }
 
 /*
@@ -27,7 +93,43 @@ main{
 DEBUG
 
 */
+.debug .flex-main{
+    background-color: crimson;
+    width: 100%;
+}
 
+.debug .flex-sidebar{
+    background-color: dimgrey;
+}
+
+.debug .flex-footer{
+    height: 100px;
+    background-color: aquamarine;
+    width: 100%;
+}
+
+.debug .sidebar-header,
+.debug .upgrade{
+    height: 100px;
+}
+
+.debug .sidebar-header{
+    background-color: darkviolet;
+    
+}
+
+.debug .upgrade{
+    background-color: darkblue;
+   
+}
+
+.debug .main-content{
+    height: calc(100vh - 100px - 100px);
+}
+
+.debug .column-footer{
+    border: 1px dashed black;
+}
 
 /*
 
