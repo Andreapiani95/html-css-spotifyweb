@@ -5,10 +5,11 @@ ROOT
 */
 
 :root{
-    --first-color: #141922;
+    --first-color: #000000;
     --second-color: #080B12;
     --third-color: #141922;
     --fourth-color:#282828;
+    --fifth-color:#D2D2D2;
 }
 
 /*
@@ -25,6 +26,10 @@ main{
 .flex-main{
     width: 100%;
 }
+.sidebar{
+    color: #D2D2D2;
+    background-color: var(--first-color);
+}
 
 .flex-sidebar{
    flex-wrap: wrap;
@@ -35,6 +40,11 @@ main{
 
 .main-window{
     width: calc(100% - 150px);
+    overflow-y: auto;
+}
+
+.main-content{
+    background-color: var(--third-color);
 }
 
 .sidebar-header{
@@ -44,6 +54,9 @@ main{
 
 .logo{
     transform: translate(0, -50%);
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .sidebar-playlist{
@@ -59,21 +72,59 @@ main{
     text-align: end;
     padding-top: 50px;
     padding-right: 2rem;
-    
+    position: sticky;
+    top: 0;
+    background-color: var(--second-color);
 }
 
 .upgrade>a>button{
     transform: translate(0, -50%);
-    background-color: aqua;
+    background-color: transparent;
     border-radius: 15% / 50%;
     font-size: 1rem;
     padding: 1rem;    
+    color: white;
+    border-color: white;
+}
+
+.flex-1{
+    width: calc(100%-150px);
+    justify-content: center;
+}
+
+.flex-1 li{
+    display: inline-block;
+}
+
+.flex-2{
+    width: calc(100%-150px);
+}
+
+.flex-2 .card{
+    width: calc(100% / 7);
+}
+
+.card img{
+    width: 100%;
+}
+
+.card i{
+    position: relative;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
 }
 /*
 
 FOOTER
 
 */
+footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    background-color: var(--fourth-color);
+}
 
 .flex-footer{
     justify-content: space-between;
@@ -94,33 +145,18 @@ DEBUG
 
 */
 .debug .flex-main{
-    background-color: crimson;
     width: 100%;
 }
 
-.debug .flex-sidebar{
-    background-color: dimgrey;
-}
 
 .debug .flex-footer{
     height: 100px;
-    background-color: aquamarine;
-    width: 100%;
+    width: 100vw;
 }
 
 .debug .sidebar-header,
 .debug .upgrade{
     height: 100px;
-}
-
-.debug .sidebar-header{
-    background-color: darkviolet;
-    
-}
-
-.debug .upgrade{
-    background-color: darkblue;
-   
 }
 
 .debug .main-content{
